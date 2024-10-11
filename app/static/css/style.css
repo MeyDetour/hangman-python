@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --simplet: hsla(270, 41%, 40%, 1);
+    --letterbackground: hsla(0, 0%, 13%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --letter-border: hsla(270, 100%, 31%, 1);
+    --letter-color: hsla(270, 93%, 50%, 1);
+    --dash: hsla(0, 0%, 9%, 1);
+    --red: hsla(11, 93%, 50%, 1);
+    --gren: hsla(100, 91%, 42%, 1);
+    --var: hsla(270, 100%, 85%, 1);
+    --dark-green: hsla(100, 99%, 30%, 1);
+}
+
+body {
+    background: var(--dash);
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+h3 {
+    margin-top: 0;
+
+    font-size: 35px;
+}
+
+.red {
+
+    color: #bd0000;
+}
+
+.gameContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.gameInterface {
+    width: 50%;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    margin: 50px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #181818, #141414);
+    box-shadow: 20px 20px 60px #090909,
+    -20px -20px 60px #232323;
+}
+
+.swordSpan {
+
+    color: var(--white);
+    font-size: 31px;
+}
+
+.wordToDiscover {
+    padding: 15px;
+    border-radius: 10px;
+    letter-spacing: 15px;
+    width: 100%;
+    font-size: 45px;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.wordToDiscover span {
+    letter-spacing: normal;
+}
+
+.letterUndiscover {
+    background: var(--letterbackground);
+    width: 60px;
+    height: 81px;
+    border-radius: 15px;
+}
+
+.letterSpace {
+    width: 17px;
+}
+
+.letterDiscover, .letterNotDiscover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 81px;
+    background: var(--letterbackground);
+    border-radius: 15px;
+}
+
+.letterDiscover {
+
+    color: var(--letter-color);
+    border: var(--letter-border) 4px solid;
+    box-shadow: 0px 0px 10px 0px hsla(270, 63%, 49%, 0.5);
+}
+
+.letterNotDiscover {
+
+    color: var(--red);
+    border: var(--red) 4px solid;
+    box-shadow: 0px 0px 10px 0px hsla(11, 93%, 50%, 1);
+}
+
+.lettersSaid {
+
+    color: var(--white);
+    font-size: 22px;
+
+}
+
+.reset {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    text-decoration: none;
+    font-size: 24px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    text-transform: uppercase;
+    color: var(--white);
+    gap: 10px;
+    padding: 8px 31px;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.1), 5px 5px 5px 0px hsla(0, 0%, 0%, 0.35)
+}
+
+.reset:hover {
+    background: #f1eeee;
+}
+
+.gameInterface svg {
+
+    height: 28px;
+}
+
+.penduSchema {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.penduSchema img {
+    height: 50%;
+    object-fit: contain;
+}
+
+.lifes {
+
+    color: var(--white);
+    font-size: 34px;
+
+}
+
+form {
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+    margin-top: 74px;
+}
+ form input::placeholder {
+     font-size: 20px
+ }
+form input {
+    width: 90%;
+    border: 0;
+    padding: 21px 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 33px;
+    color: var(--white);
+    background: var(--letterbackground);
+}
+
+form button {
+    background: var(--simplet);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 20px;
+    width: 8%;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+.lost, .congratulations {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    border-radius: 20px;
+    padding: 31px 137px;
+    box-sizing: border-box;
+}
+
+.lost a, .congratulations a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 5px;
+    font-size: 24px;
+    box-shadow: inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.1), 5px 5px 5px 0px hsla(0, 0%, 0%, 0.35)
+}
+
+.lost {
+    color: var(--red);
+    box-shadow: 0px 0px 15px 0px var(--red);
+    border: var(--red) 4px solid;
+}
+
+.lost a {
+    color: var(--red);
+}
+
+.congratulations {
+    color: var(--gren);
+    box-shadow: 0px 0px 15px 0px var(--dark-green);
+    border: var(--dark-green) 4px solid;
+}
+
+.congratulations a {
+    color: var(--green);
+}
