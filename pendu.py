@@ -127,7 +127,7 @@ class Pendu:
         #when many letter in input it's hit or miss
         if type(given_letter) == list:
 
-            session['letter_said'] += (given_letter)
+            session['letter_said'] += given_letter
             session['letter_said'].sort()
             for letter in given_letter :
                 print(letter)
